@@ -422,7 +422,7 @@ function getDefaultValue(field, value) {
     case 'string':   return value || '';
     case 'bool':     return value === 'true';
     case 'map':      return {};
-    default:         return null;
+    default:         return undefined;
     }
 }
 
