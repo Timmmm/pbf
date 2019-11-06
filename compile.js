@@ -225,7 +225,7 @@ function compileDest(ctx) {
     for (var i = 0; i < ctx._proto.fields.length; i++) {
         var field = ctx._proto.fields[i];
         props[field.name + ': ' + JSON.stringify(ctx._defaults[field.name])] = true;
-        if (field.oneof) props[field.oneof + ': null'] = true;
+        if (field.oneof) props[field.oneof + ': undefined'] = true;
     }
     return '{' + Object.keys(props).join(', ') + '}';
 }
